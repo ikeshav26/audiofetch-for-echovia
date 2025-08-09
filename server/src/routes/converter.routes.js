@@ -1,12 +1,11 @@
 import express from 'express';
+import { convertYoutubeToMp3 } from '../controller/convert.controller.js';
 
 
 const router=express.Router();
 
 
-router.get('/convert',(req,res)=>{
-    res.send('Conversion started');
-})
+router.post('/convert',convertYoutubeToMp3)
 
 
 
