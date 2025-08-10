@@ -1,4 +1,4 @@
-# YouTube to MP3 Converter
+# YT DL
 
 A full-stack web application that converts YouTube videos to high-quality MP3 audio files. This project was created to build a personal ad-free music library by downloading the best quality songs from YouTube, which will then be integrated into a custom music player application.
 
@@ -63,7 +63,7 @@ yt-to-mp3/
 ### Prerequisites
 - Node.js (v14 or higher)
 - npm or yarn package manager
-- RapidAPI account for YouTube MP3 conversion service
+- RapidAPI account for YT DL service
 
 ### Backend Setup
 
@@ -115,11 +115,11 @@ npm run dev
 
 ## 🔑 API Configuration
 
-This project uses RapidAPI's YouTube MP3 converter service. To get your API key:
+This project uses RapidAPI's YT DL service. To get your API key:
 
 1. Visit [RapidAPI](https://rapidapi.com/)
 2. Sign up for a free account
-3. Subscribe to a YouTube MP3 converter service
+3. Subscribe to a YT DL service
 4. Copy your API key and host URL
 5. Add them to your server's `.env` file
 
@@ -138,7 +138,7 @@ This project uses RapidAPI's YouTube MP3 converter service. To get your API key:
 
 ## 🎯 Future Plans
 
-This converter is part of a larger project to create:
+This downloader is part of a larger project to create:
 - **Personal Music Library**: Curated collection of high-quality songs
 - **Ad-Free Music Player**: Custom player application without advertisements
 - **Offline Listening**: Local music storage for uninterrupted playback

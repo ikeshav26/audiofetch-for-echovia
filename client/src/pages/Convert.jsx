@@ -35,10 +35,10 @@ const Convert = () => {
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            YouTube to MP3 Converter
+            YT-DL
           </h1>
           <p className="text-lg text-gray-600">
-            Convert your favorite YouTube videos to MP3 format quickly and easily
+            Download your favorite YouTube videos as MP3 files quickly and easily
           </p>
         </div>
 
@@ -111,24 +111,29 @@ const Convert = () => {
         {/* Download Section */}
         {downloadLink && (
           <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-            <div className="flex items-center justify-between">
-              <div>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div className="flex-1">
                 <h3 className="text-lg font-medium text-green-800 mb-2">
                   Conversion Complete!
                 </h3>
-                <h3 className="text-lg font-medium text-black mb-2">Showing results for: <span className="text-lg font-medium text-green-800 mb-2">{title}</span></h3>
-                <p className="text-green-700">
+                <div className="mb-2">
+                  <span className="text-sm font-medium text-black">Showing results for:</span>
+                  <p className="text-sm font-medium text-green-800 break-words">{title}</p>
+                </div>
+                <p className="text-green-700 text-sm">
                   Your MP3 file is ready for download
                 </p>
               </div>
-              <Link 
-                to={downloadLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-md transition duration-200 ease-in-out"
-              >
-                Download MP3
-              </Link>
+              <div className="flex-shrink-0">
+                <Link 
+                  to={downloadLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full lg:w-auto text-center bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-md transition duration-200 ease-in-out"
+                >
+                  Download MP3
+                </Link>
+              </div>
             </div>
           </div>
         )}
@@ -146,7 +151,7 @@ const Convert = () => {
 
         {/* Footer */}
         <div className="text-center mt-8 text-gray-500 text-sm">
-          <p>Free YouTube to MP3 converter • No registration required</p>
+          <p>Free YT-DL downloader • No registration required</p>
         </div>
       </div>
     </div>
