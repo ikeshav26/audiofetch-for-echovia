@@ -17,7 +17,6 @@ const Convert = () => {
 
         try{
             const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/convert`, { videoId });
-            console.log(res.data);
             setDownloadLink(res.data.data.link);
             settitle(res.data.data.title);
             setVideoId('');
