@@ -8,6 +8,7 @@ const Convert = () => {
     const [videoId, setVideoId] = useState('')
     const [downloadLink, setDownloadLink] = useState('')
     const [loading, setLoading] = useState(false)
+    const [title, settitle] = useState('')
 
     const submithandler=async (e)=>{
         e.preventDefault();
@@ -18,6 +19,7 @@ const Convert = () => {
             const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/convert`, { videoId });
             console.log(res.data);
             setDownloadLink(res.data.data.link);
+            settitle(res.data.data.title);
             setVideoId('');
             toast.success(res.data.message || 'Conversion successful!');
         }catch(err){
@@ -115,6 +117,7 @@ const Convert = () => {
                 <h3 className="text-lg font-medium text-green-800 mb-2">
                   Conversion Complete!
                 </h3>
+                <h3 className="text-lg font-medium text-black mb-2">Showing results for: <span className="text-lg font-medium text-green-800 mb-2">{title}</span></h3>
                 <p className="text-green-700">
                   Your MP3 file is ready for download
                 </p>
